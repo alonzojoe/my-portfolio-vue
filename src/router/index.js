@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue"
 import TestPage from "../views/TestPage.vue"
+import NotFound from "../views/404Page.vue"
 
 
 const router = createRouter({
@@ -16,6 +17,10 @@ const router = createRouter({
             name: "test",
             component: TestPage
         },
+        {
+            path: "/:catchall(.*)*",
+            component: NotFound
+        }
    
     ]
 })

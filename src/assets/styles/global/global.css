@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root{
+    --bg-color: #13141F;
+    --text-white: #fff;
+    --text-grey: #B3B3B7;
+    --text-purple: #8E57E8;
+    --main-color: #13141F;
+    --seondary-bg-color: #1C1D28;
+    --big-font: 5rem;
+    --h2-font: 3rem;
+    --p-font: 1.1rem
+}
+
+body{
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar {
+width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background: var(--main-color); 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: var(--seondary-bg-color); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #292a3a; 
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.logo .text-logo{
+    color: var(--text-white);
+    font-size: 30px;
+    font-weight: 700;
+    padding-left: 10px;
+}
+
+.logo img{
+    max-width: 100%;
+    width: 40px;
+    height: auto;
+
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--main-color);
+    padding: 30px 12%;
+    transition: .3s;
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li{
+    position: relative;
+}
+
+.nav-links a{
+    font-size: var(--p-font);
+    color: var(--text-white);
+    font-weight: 600;
+    padding: 10px 27px;;
+}
+
+.nav-links a::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: var(--text-purple);
+    bottom: -3px;
+    left: 0;
+    transition:  ease .40s;
+}
+
+.nav-links a:hover::after{
+    width: 100%;
+}
+
+.nav-links a:hover{
+    color: var(--text-purple);
+}
+
+#menu-icon{
+    color: var(--text-white);
+    font-size: 35px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+.btn-sm-purple{
+    color: var(--text-white);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 9px 30px;
+    background: var(--seondary-bg-color);
+    cursor: pointer;
+    border: 1px solid var(--text-purple);
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: ease .50;
+}
+
+.btn-sm-purple:hover{
+    transform: scale(1.1);
+    transition: .5s;
+    background: transparent;
+    
+}
